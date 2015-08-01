@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  RIAppDelegate.h
 //  RefreshCatalogue
 //
 //  Created by Ondrej Rafaj on 01/08/2015.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface RIAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

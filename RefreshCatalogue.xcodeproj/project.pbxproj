@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		15467BEE1B6C91D0001AFEDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BED1B6C91D0001AFEDE /* main.m */; };
-		15467BF11B6C91D0001AFEDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF01B6C91D0001AFEDE /* AppDelegate.m */; };
-		15467BF41B6C91D0001AFEDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF31B6C91D0001AFEDE /* ViewController.m */; };
+		15467BF11B6C91D0001AFEDE /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF01B6C91D0001AFEDE /* RIAppDelegate.m */; };
+		15467BF41B6C91D0001AFEDE /* RIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF31B6C91D0001AFEDE /* RIHomeViewController.m */; };
 		15467BF71B6C91D0001AFEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15467BF51B6C91D0001AFEDE /* Main.storyboard */; };
 		15467BF91B6C91D0001AFEDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15467BF81B6C91D0001AFEDE /* Images.xcassets */; };
 		15467BFC1B6C91D0001AFEDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15467BFA1B6C91D0001AFEDE /* LaunchScreen.xib */; };
 		15467C081B6C91D0001AFEDE /* RefreshCatalogueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C071B6C91D0001AFEDE /* RefreshCatalogueTests.m */; };
+		15467C171B6C929D001AFEDE /* RIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C161B6C929D001AFEDE /* RIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +31,18 @@
 		15467BE81B6C91D0001AFEDE /* RefreshCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15467BEC1B6C91D0001AFEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15467BED1B6C91D0001AFEDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		15467BEF1B6C91D0001AFEDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		15467BF01B6C91D0001AFEDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15467BF21B6C91D0001AFEDE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		15467BF31B6C91D0001AFEDE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		15467BEF1B6C91D0001AFEDE /* RIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIAppDelegate.h; sourceTree = "<group>"; };
+		15467BF01B6C91D0001AFEDE /* RIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIAppDelegate.m; sourceTree = "<group>"; };
+		15467BF21B6C91D0001AFEDE /* RIHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIHomeViewController.h; sourceTree = "<group>"; };
+		15467BF31B6C91D0001AFEDE /* RIHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIHomeViewController.m; sourceTree = "<group>"; };
 		15467BF61B6C91D0001AFEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15467BF81B6C91D0001AFEDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15467BFB1B6C91D0001AFEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		15467C011B6C91D0001AFEDE /* RefreshCatalogueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefreshCatalogueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15467C061B6C91D0001AFEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15467C071B6C91D0001AFEDE /* RefreshCatalogueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshCatalogueTests.m; sourceTree = "<group>"; };
+		15467C151B6C929D001AFEDE /* RIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIViewController.h; sourceTree = "<group>"; };
+		15467C161B6C929D001AFEDE /* RIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				15467BEA1B6C91D0001AFEDE /* RefreshCatalogue */,
+				15467BEB1B6C91D0001AFEDE /* Supporting Files */,
 				15467C041B6C91D0001AFEDE /* RefreshCatalogueTests */,
 				15467BE91B6C91D0001AFEDE /* Products */,
 			);
@@ -81,14 +85,11 @@
 		15467BEA1B6C91D0001AFEDE /* RefreshCatalogue */ = {
 			isa = PBXGroup;
 			children = (
-				15467BEF1B6C91D0001AFEDE /* AppDelegate.h */,
-				15467BF01B6C91D0001AFEDE /* AppDelegate.m */,
-				15467BF21B6C91D0001AFEDE /* ViewController.h */,
-				15467BF31B6C91D0001AFEDE /* ViewController.m */,
-				15467BF51B6C91D0001AFEDE /* Main.storyboard */,
-				15467BF81B6C91D0001AFEDE /* Images.xcassets */,
-				15467BFA1B6C91D0001AFEDE /* LaunchScreen.xib */,
-				15467BEB1B6C91D0001AFEDE /* Supporting Files */,
+				15467C191B6C92B8001AFEDE /* Configuration */,
+				15467C121B6C922A001AFEDE /* Views */,
+				15467C111B6C9221001AFEDE /* View controllers */,
+				15467BEF1B6C91D0001AFEDE /* RIAppDelegate.h */,
+				15467BF01B6C91D0001AFEDE /* RIAppDelegate.m */,
 			);
 			path = RefreshCatalogue;
 			sourceTree = "<group>";
@@ -96,10 +97,14 @@
 		15467BEB1B6C91D0001AFEDE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15467BF51B6C91D0001AFEDE /* Main.storyboard */,
+				15467BF81B6C91D0001AFEDE /* Images.xcassets */,
+				15467BFA1B6C91D0001AFEDE /* LaunchScreen.xib */,
 				15467BEC1B6C91D0001AFEDE /* Info.plist */,
 				15467BED1B6C91D0001AFEDE /* main.m */,
 			);
 			name = "Supporting Files";
+			path = RefreshCatalogue;
 			sourceTree = "<group>";
 		};
 		15467C041B6C91D0001AFEDE /* RefreshCatalogueTests */ = {
@@ -117,6 +122,55 @@
 				15467C061B6C91D0001AFEDE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15467C111B6C9221001AFEDE /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				15467C181B6C92AE001AFEDE /* Menu */,
+				15467C131B6C9278001AFEDE /* Home */,
+				15467C141B6C9283001AFEDE /* Basic */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		15467C121B6C922A001AFEDE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		15467C131B6C9278001AFEDE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				15467BF21B6C91D0001AFEDE /* RIHomeViewController.h */,
+				15467BF31B6C91D0001AFEDE /* RIHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		15467C141B6C9283001AFEDE /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				15467C151B6C929D001AFEDE /* RIViewController.h */,
+				15467C161B6C929D001AFEDE /* RIViewController.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		15467C181B6C92AE001AFEDE /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		15467C191B6C92B8001AFEDE /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15467BF41B6C91D0001AFEDE /* ViewController.m in Sources */,
-				15467BF11B6C91D0001AFEDE /* AppDelegate.m in Sources */,
+				15467BF41B6C91D0001AFEDE /* RIHomeViewController.m in Sources */,
+				15467BF11B6C91D0001AFEDE /* RIAppDelegate.m in Sources */,
 				15467BEE1B6C91D0001AFEDE /* main.m in Sources */,
+				15467C171B6C929D001AFEDE /* RIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +473,7 @@
 				15467C0D1B6C91D0001AFEDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15467C0E1B6C91D0001AFEDE /* Build configuration list for PBXNativeTarget "RefreshCatalogueTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +482,7 @@
 				15467C101B6C91D0001AFEDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

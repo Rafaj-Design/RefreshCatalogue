@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  RIAppDelegate.m
 //  RefreshCatalogue
 //
 //  Created by Ondrej Rafaj on 01/08/2015.
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "RIAppDelegate.h"
 
-@interface AppDelegate ()
+@interface RIAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation RIAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
