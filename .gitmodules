@@ -1,0 +1,6 @@
+[submodule "Thirdparty/FontAwesomeKit"]
+	path = Thirdparty/FontAwesomeKit
+	url = git@github.com:PrideChung/FontAwesomeKit.git
+[submodule "Thirdparty/iOS-Slide-Menu"]
+	path = Thirdparty/iOS-Slide-Menu
+	url = git@github.com:aryaxt/iOS-Slide-Menu.git

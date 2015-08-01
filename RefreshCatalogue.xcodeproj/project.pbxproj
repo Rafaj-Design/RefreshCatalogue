@@ -9,12 +9,38 @@
 /* Begin PBXBuildFile section */
 		15467BEE1B6C91D0001AFEDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BED1B6C91D0001AFEDE /* main.m */; };
 		15467BF11B6C91D0001AFEDE /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF01B6C91D0001AFEDE /* RIAppDelegate.m */; };
-		15467BF41B6C91D0001AFEDE /* RIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF31B6C91D0001AFEDE /* RIHomeViewController.m */; };
+		15467BF41B6C91D0001AFEDE /* RICatalogueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF31B6C91D0001AFEDE /* RICatalogueViewController.m */; };
 		15467BF71B6C91D0001AFEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15467BF51B6C91D0001AFEDE /* Main.storyboard */; };
 		15467BF91B6C91D0001AFEDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15467BF81B6C91D0001AFEDE /* Images.xcassets */; };
 		15467BFC1B6C91D0001AFEDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15467BFA1B6C91D0001AFEDE /* LaunchScreen.xib */; };
 		15467C081B6C91D0001AFEDE /* RefreshCatalogueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C071B6C91D0001AFEDE /* RefreshCatalogueTests.m */; };
 		15467C171B6C929D001AFEDE /* RIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C161B6C929D001AFEDE /* RIViewController.m */; };
+		15467C841B6C942C001AFEDE /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C2E1B6C942C001AFEDE /* FAKFontAwesome.m */; };
+		15467C851B6C942C001AFEDE /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C301B6C942C001AFEDE /* FAKFoundationIcons.m */; };
+		15467C861B6C942C001AFEDE /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C321B6C942C001AFEDE /* FAKIcon.m */; };
+		15467C871B6C942C001AFEDE /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C341B6C942C001AFEDE /* FAKIonIcons.m */; };
+		15467C881B6C942C001AFEDE /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467C361B6C942C001AFEDE /* FAKZocial.m */; };
+		15467C891B6C942C001AFEDE /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15467C371B6C942C001AFEDE /* FontAwesome.otf */; };
+		15467C8A1B6C942C001AFEDE /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15467C391B6C942C001AFEDE /* foundation-icons.ttf */; };
+		15467C8B1B6C942C001AFEDE /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15467C3A1B6C942C001AFEDE /* ionicons.ttf */; };
+		15467C8C1B6C942C001AFEDE /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15467C3B1B6C942C001AFEDE /* zocial-regular-webfont.ttf */; };
+		15467CB91B6C9479001AFEDE /* RIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CB81B6C9479001AFEDE /* RIMenuViewController.m */; };
+		15467CBC1B6C955A001AFEDE /* RICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CBB1B6C955A001AFEDE /* RICollectionViewController.m */; };
+		15467CC11B6C9639001AFEDE /* SecondScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15467CC01B6C9639001AFEDE /* SecondScreen.storyboard */; };
+		15467CC41B6C9666001AFEDE /* RISecondScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CC31B6C9666001AFEDE /* RISecondScreenViewController.m */; };
+		15467CC81B6C96B7001AFEDE /* RIProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CC71B6C96B7001AFEDE /* RIProductViewController.m */; };
+		15467CDB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CCD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m */; };
+		15467CDC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CCF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m */; };
+		15467CDD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CD11B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		15467CDE1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CD31B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.m */; };
+		15467CDF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CD51B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		15467CE01B6C9A0D001AFEDE /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 15467CD71B6C9A0D001AFEDE /* menu-button.png */; };
+		15467CE11B6C9A0D001AFEDE /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15467CD81B6C9A0D001AFEDE /* menu-button@2x.png */; };
+		15467CE21B6C9A0D001AFEDE /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CDA1B6C9A0D001AFEDE /* SlideNavigationController.m */; };
+		15467CE61B6C9B09001AFEDE /* RICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CE51B6C9B09001AFEDE /* RICollectionViewCell.m */; };
+		15467CEB1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CEA1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m */; };
+		15467CF11B6CDCFA001AFEDE /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CEE1B6CDCFA001AFEDE /* UIColor+Tools.m */; };
+		15467CF21B6CDCFA001AFEDE /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CF01B6CDCFA001AFEDE /* UIImage+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +59,8 @@
 		15467BED1B6C91D0001AFEDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15467BEF1B6C91D0001AFEDE /* RIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIAppDelegate.h; sourceTree = "<group>"; };
 		15467BF01B6C91D0001AFEDE /* RIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIAppDelegate.m; sourceTree = "<group>"; };
-		15467BF21B6C91D0001AFEDE /* RIHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIHomeViewController.h; sourceTree = "<group>"; };
-		15467BF31B6C91D0001AFEDE /* RIHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIHomeViewController.m; sourceTree = "<group>"; };
+		15467BF21B6C91D0001AFEDE /* RICatalogueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RICatalogueViewController.h; sourceTree = "<group>"; };
+		15467BF31B6C91D0001AFEDE /* RICatalogueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RICatalogueViewController.m; sourceTree = "<group>"; };
 		15467BF61B6C91D0001AFEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15467BF81B6C91D0001AFEDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15467BFB1B6C91D0001AFEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +69,53 @@
 		15467C071B6C91D0001AFEDE /* RefreshCatalogueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshCatalogueTests.m; sourceTree = "<group>"; };
 		15467C151B6C929D001AFEDE /* RIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIViewController.h; sourceTree = "<group>"; };
 		15467C161B6C929D001AFEDE /* RIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIViewController.m; sourceTree = "<group>"; };
+		15467C2D1B6C942C001AFEDE /* FAKFontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFontAwesome.h; sourceTree = "<group>"; };
+		15467C2E1B6C942C001AFEDE /* FAKFontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFontAwesome.m; sourceTree = "<group>"; };
+		15467C2F1B6C942C001AFEDE /* FAKFoundationIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFoundationIcons.h; sourceTree = "<group>"; };
+		15467C301B6C942C001AFEDE /* FAKFoundationIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFoundationIcons.m; sourceTree = "<group>"; };
+		15467C311B6C942C001AFEDE /* FAKIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIcon.h; sourceTree = "<group>"; };
+		15467C321B6C942C001AFEDE /* FAKIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIcon.m; sourceTree = "<group>"; };
+		15467C331B6C942C001AFEDE /* FAKIonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIonIcons.h; sourceTree = "<group>"; };
+		15467C341B6C942C001AFEDE /* FAKIonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIonIcons.m; sourceTree = "<group>"; };
+		15467C351B6C942C001AFEDE /* FAKZocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKZocial.h; sourceTree = "<group>"; };
+		15467C361B6C942C001AFEDE /* FAKZocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKZocial.m; sourceTree = "<group>"; };
+		15467C371B6C942C001AFEDE /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		15467C381B6C942C001AFEDE /* FontAwesomeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesomeKit.h; sourceTree = "<group>"; };
+		15467C391B6C942C001AFEDE /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "foundation-icons.ttf"; sourceTree = "<group>"; };
+		15467C3A1B6C942C001AFEDE /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		15467C3B1B6C942C001AFEDE /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		15467CB71B6C9479001AFEDE /* RIMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIMenuViewController.h; sourceTree = "<group>"; };
+		15467CB81B6C9479001AFEDE /* RIMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIMenuViewController.m; sourceTree = "<group>"; };
+		15467CBA1B6C955A001AFEDE /* RICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICollectionViewController.h; sourceTree = "<group>"; };
+		15467CBB1B6C955A001AFEDE /* RICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICollectionViewController.m; sourceTree = "<group>"; };
+		15467CC01B6C9639001AFEDE /* SecondScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondScreen.storyboard; sourceTree = "<group>"; };
+		15467CC21B6C9666001AFEDE /* RISecondScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RISecondScreenViewController.h; sourceTree = "<group>"; };
+		15467CC31B6C9666001AFEDE /* RISecondScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RISecondScreenViewController.m; sourceTree = "<group>"; };
+		15467CC61B6C96B7001AFEDE /* RIProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIProductViewController.h; sourceTree = "<group>"; };
+		15467CC71B6C96B7001AFEDE /* RIProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIProductViewController.m; sourceTree = "<group>"; };
+		15467CCB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		15467CCC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+		15467CCD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		15467CCE1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		15467CCF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		15467CD01B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		15467CD11B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		15467CD21B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		15467CD31B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		15467CD41B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		15467CD51B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		15467CD71B6C9A0D001AFEDE /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button.png"; sourceTree = "<group>"; };
+		15467CD81B6C9A0D001AFEDE /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button@2x.png"; sourceTree = "<group>"; };
+		15467CD91B6C9A0D001AFEDE /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationController.h; sourceTree = "<group>"; };
+		15467CDA1B6C9A0D001AFEDE /* SlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationController.m; sourceTree = "<group>"; };
+		15467CE41B6C9B09001AFEDE /* RICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICollectionViewCell.h; sourceTree = "<group>"; };
+		15467CE51B6C9B09001AFEDE /* RICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICollectionViewCell.m; sourceTree = "<group>"; };
+		15467CE91B6C9B35001AFEDE /* RICatalogueCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICatalogueCollectionViewCell.h; sourceTree = "<group>"; };
+		15467CEA1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICatalogueCollectionViewCell.m; sourceTree = "<group>"; };
+		15467CED1B6CDCFA001AFEDE /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tools.h"; sourceTree = "<group>"; };
+		15467CEE1B6CDCFA001AFEDE /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
+		15467CEF1B6CDCFA001AFEDE /* UIImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tools.h"; sourceTree = "<group>"; };
+		15467CF01B6CDCFA001AFEDE /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +158,10 @@
 		15467BEA1B6C91D0001AFEDE /* RefreshCatalogue */ = {
 			isa = PBXGroup;
 			children = (
+				15467C1A1B6C942C001AFEDE /* Thirdparty */,
+				15467CEC1B6CDCDF001AFEDE /* Categories */,
 				15467C191B6C92B8001AFEDE /* Configuration */,
+				15467CE31B6C9ADC001AFEDE /* Cells */,
 				15467C121B6C922A001AFEDE /* Views */,
 				15467C111B6C9221001AFEDE /* View controllers */,
 				15467BEF1B6C91D0001AFEDE /* RIAppDelegate.h */,
@@ -98,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				15467BF51B6C91D0001AFEDE /* Main.storyboard */,
+				15467CC01B6C9639001AFEDE /* SecondScreen.storyboard */,
 				15467BF81B6C91D0001AFEDE /* Images.xcassets */,
 				15467BFA1B6C91D0001AFEDE /* LaunchScreen.xib */,
 				15467BEC1B6C91D0001AFEDE /* Info.plist */,
@@ -127,6 +204,8 @@
 		15467C111B6C9221001AFEDE /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				15467CBD1B6C95F5001AFEDE /* Second Screen */,
+				15467CC51B6C9697001AFEDE /* Product */,
 				15467C181B6C92AE001AFEDE /* Menu */,
 				15467C131B6C9278001AFEDE /* Home */,
 				15467C141B6C9283001AFEDE /* Basic */,
@@ -144,8 +223,8 @@
 		15467C131B6C9278001AFEDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				15467BF21B6C91D0001AFEDE /* RIHomeViewController.h */,
-				15467BF31B6C91D0001AFEDE /* RIHomeViewController.m */,
+				15467BF21B6C91D0001AFEDE /* RICatalogueViewController.h */,
+				15467BF31B6C91D0001AFEDE /* RICatalogueViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -153,6 +232,8 @@
 		15467C141B6C9283001AFEDE /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				15467CBA1B6C955A001AFEDE /* RICollectionViewController.h */,
+				15467CBB1B6C955A001AFEDE /* RICollectionViewController.m */,
 				15467C151B6C929D001AFEDE /* RIViewController.h */,
 				15467C161B6C929D001AFEDE /* RIViewController.m */,
 			);
@@ -162,6 +243,8 @@
 		15467C181B6C92AE001AFEDE /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				15467CB71B6C9479001AFEDE /* RIMenuViewController.h */,
+				15467CB81B6C9479001AFEDE /* RIMenuViewController.m */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -171,6 +254,141 @@
 			children = (
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		15467C1A1B6C942C001AFEDE /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				15467CC91B6C9A0D001AFEDE /* Source */,
+				15467C2C1B6C942C001AFEDE /* FontAwesomeKit */,
+			);
+			path = Thirdparty;
+			sourceTree = SOURCE_ROOT;
+		};
+		15467C2C1B6C942C001AFEDE /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				15467C2D1B6C942C001AFEDE /* FAKFontAwesome.h */,
+				15467C2E1B6C942C001AFEDE /* FAKFontAwesome.m */,
+				15467C2F1B6C942C001AFEDE /* FAKFoundationIcons.h */,
+				15467C301B6C942C001AFEDE /* FAKFoundationIcons.m */,
+				15467C311B6C942C001AFEDE /* FAKIcon.h */,
+				15467C321B6C942C001AFEDE /* FAKIcon.m */,
+				15467C331B6C942C001AFEDE /* FAKIonIcons.h */,
+				15467C341B6C942C001AFEDE /* FAKIonIcons.m */,
+				15467C351B6C942C001AFEDE /* FAKZocial.h */,
+				15467C361B6C942C001AFEDE /* FAKZocial.m */,
+				15467C371B6C942C001AFEDE /* FontAwesome.otf */,
+				15467C381B6C942C001AFEDE /* FontAwesomeKit.h */,
+				15467C391B6C942C001AFEDE /* foundation-icons.ttf */,
+				15467C3A1B6C942C001AFEDE /* ionicons.ttf */,
+				15467C3B1B6C942C001AFEDE /* zocial-regular-webfont.ttf */,
+			);
+			name = FontAwesomeKit;
+			path = FontAwesomeKit/FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		15467CBD1B6C95F5001AFEDE /* Second Screen */ = {
+			isa = PBXGroup;
+			children = (
+				15467CBE1B6C960F001AFEDE /* Home */,
+			);
+			name = "Second Screen";
+			sourceTree = "<group>";
+		};
+		15467CBE1B6C960F001AFEDE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				15467CC21B6C9666001AFEDE /* RISecondScreenViewController.h */,
+				15467CC31B6C9666001AFEDE /* RISecondScreenViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		15467CC51B6C9697001AFEDE /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				15467CC61B6C96B7001AFEDE /* RIProductViewController.h */,
+				15467CC71B6C96B7001AFEDE /* RIProductViewController.m */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		15467CC91B6C9A0D001AFEDE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				15467CCA1B6C9A0D001AFEDE /* Animations */,
+				15467CD61B6C9A0D001AFEDE /* Assets */,
+				15467CD91B6C9A0D001AFEDE /* SlideNavigationController.h */,
+				15467CDA1B6C9A0D001AFEDE /* SlideNavigationController.m */,
+			);
+			name = Source;
+			path = "iOS-Slide-Menu/SlideMenu/Source";
+			sourceTree = "<group>";
+		};
+		15467CCA1B6C9A0D001AFEDE /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				15467CCB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimator.h */,
+				15467CCC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.h */,
+				15467CCD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m */,
+				15467CCE1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.h */,
+				15467CCF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m */,
+				15467CD01B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				15467CD11B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				15467CD21B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.h */,
+				15467CD31B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.m */,
+				15467CD41B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				15467CD51B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		15467CD61B6C9A0D001AFEDE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				15467CD71B6C9A0D001AFEDE /* menu-button.png */,
+				15467CD81B6C9A0D001AFEDE /* menu-button@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		15467CE31B6C9ADC001AFEDE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				15467CE81B6C9B17001AFEDE /* Catalogue */,
+				15467CE71B6C9B0C001AFEDE /* Basic */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		15467CE71B6C9B0C001AFEDE /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				15467CE41B6C9B09001AFEDE /* RICollectionViewCell.h */,
+				15467CE51B6C9B09001AFEDE /* RICollectionViewCell.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		15467CE81B6C9B17001AFEDE /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				15467CE91B6C9B35001AFEDE /* RICatalogueCollectionViewCell.h */,
+				15467CEA1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m */,
+			);
+			name = Catalogue;
+			sourceTree = "<group>";
+		};
+		15467CEC1B6CDCDF001AFEDE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				15467CED1B6CDCFA001AFEDE /* UIColor+Tools.h */,
+				15467CEE1B6CDCFA001AFEDE /* UIColor+Tools.m */,
+				15467CEF1B6CDCFA001AFEDE /* UIImage+Tools.h */,
+				15467CF01B6CDCFA001AFEDE /* UIImage+Tools.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +435,7 @@
 		15467BE01B6C91D0001AFEDE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RI;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Ridiculous Innovations";
 				TargetAttributes = {
@@ -253,8 +472,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15467C8C1B6C942C001AFEDE /* zocial-regular-webfont.ttf in Resources */,
 				15467BF71B6C91D0001AFEDE /* Main.storyboard in Resources */,
+				15467CC11B6C9639001AFEDE /* SecondScreen.storyboard in Resources */,
+				15467CE11B6C9A0D001AFEDE /* menu-button@2x.png in Resources */,
+				15467C8A1B6C942C001AFEDE /* foundation-icons.ttf in Resources */,
 				15467BFC1B6C91D0001AFEDE /* LaunchScreen.xib in Resources */,
+				15467CE01B6C9A0D001AFEDE /* menu-button.png in Resources */,
+				15467C8B1B6C942C001AFEDE /* ionicons.ttf in Resources */,
+				15467C891B6C942C001AFEDE /* FontAwesome.otf in Resources */,
 				15467BF91B6C91D0001AFEDE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +499,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15467BF41B6C91D0001AFEDE /* RIHomeViewController.m in Sources */,
+				15467CBC1B6C955A001AFEDE /* RICollectionViewController.m in Sources */,
+				15467CEB1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m in Sources */,
+				15467CE21B6C9A0D001AFEDE /* SlideNavigationController.m in Sources */,
+				15467BF41B6C91D0001AFEDE /* RICatalogueViewController.m in Sources */,
+				15467CDF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				15467C851B6C942C001AFEDE /* FAKFoundationIcons.m in Sources */,
 				15467BF11B6C91D0001AFEDE /* RIAppDelegate.m in Sources */,
+				15467CC81B6C96B7001AFEDE /* RIProductViewController.m in Sources */,
+				15467CE61B6C9B09001AFEDE /* RICollectionViewCell.m in Sources */,
+				15467CDD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				15467BEE1B6C91D0001AFEDE /* main.m in Sources */,
 				15467C171B6C929D001AFEDE /* RIViewController.m in Sources */,
+				15467C841B6C942C001AFEDE /* FAKFontAwesome.m in Sources */,
+				15467CF11B6CDCFA001AFEDE /* UIColor+Tools.m in Sources */,
+				15467CDB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m in Sources */,
+				15467CC41B6C9666001AFEDE /* RISecondScreenViewController.m in Sources */,
+				15467CDC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				15467C861B6C942C001AFEDE /* FAKIcon.m in Sources */,
+				15467CF21B6CDCFA001AFEDE /* UIImage+Tools.m in Sources */,
+				15467CDE1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				15467C881B6C942C001AFEDE /* FAKZocial.m in Sources */,
+				15467CB91B6C9479001AFEDE /* RIMenuViewController.m in Sources */,
+				15467C871B6C942C001AFEDE /* FAKIonIcons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,8 +650,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RefreshCatalogue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -415,8 +662,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RefreshCatalogue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

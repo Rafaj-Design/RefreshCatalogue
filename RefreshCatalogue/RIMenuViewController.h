@@ -1,5 +1,5 @@
 //
-//  RIHomeViewController.h
+//  RIMenuViewController.h
 //  RefreshCatalogue
 //
 //  Created by Ondrej Rafaj on 01/08/2015.
@@ -8,8 +8,6 @@
 
 #import "RIViewController.h"
 
-@interface RIHomeViewController : RIViewController
-
+@interface RIMenuViewController : RIViewController
 
 @end
-

@@ -7,16 +7,26 @@
 //
 
 #import "RIAppDelegate.h"
+#import "SlideNavigationController.h"
+#import "RIMenuViewController.h"
+
 
 @interface RIAppDelegate ()
 
+@property (nonatomic, readonly) RIMenuViewController *menuViewController;
+
 @end
+
 
 @implementation RIAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _menuViewController = (RIMenuViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"menu"];
+    
+    [SlideNavigationController sharedInstance].leftMenu = _menuViewController;
+    
     return YES;
 }
 

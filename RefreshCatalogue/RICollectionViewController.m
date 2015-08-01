@@ -1,27 +1,33 @@
 //
-//  RIHomeViewController.m
+//  RICollectionViewController.m
 //  RefreshCatalogue
 //
 //  Created by Ondrej Rafaj on 01/08/2015.
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import "RIHomeViewController.h"
+#import "RICollectionViewController.h"
 
-@interface RIHomeViewController ()
+
+@interface RICollectionViewController ()
 
 @end
 
-@implementation RIHomeViewController
+
+@implementation RICollectionViewController
+
+static NSString * const reuseIdentifier = @"Cell";
+
+
+#pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 
 @end
