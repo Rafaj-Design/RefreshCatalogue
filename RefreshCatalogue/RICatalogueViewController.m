@@ -9,6 +9,7 @@
 #import "RICatalogueViewController.h"
 #import "RICatalogueCollectionViewCell.h"
 #import "SlideNavigationController.h"
+#import "UIImageView+AFNetworking.h"
 
 
 @interface RICatalogueViewController () <SlideNavigationControllerDelegate, UICollectionViewDelegateFlowLayout>
@@ -58,54 +59,57 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 21;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = nil;
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0 && ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
         identifier = reuseHeaderIdentifier;
     }
     else {
         identifier = reuseIdentifier;
     }
     RICatalogueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    [cell startLoadingAnimation];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://lorempixel.com/600/420/?x=%ld", indexPath.row]];
+    [cell.imageView setImageWithURL:url placeholderImage:[[UIImage alloc] init]];
     return cell;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 220;
-    
-    if (indexPath.row == 0 || (self.view.frame.size.width < 500)) {
-        if (self.view.frame.size.width < 500) {
+    if (self.view.frame.size.width < 500) {
+        return CGSizeMake(self.view.frame.size.width, height);
+    }
+    else {
+        if (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) && indexPath.row == 0) {
+            height = 450;
             return CGSizeMake(self.view.frame.size.width, height);
         }
         else {
-            if (self.view.frame.size.height > 500) {
-                height = 350;
+            if (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
+                UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+                if (UIDeviceOrientationIsLandscape(deviceOrientation)) {
+                    height += 100;
+                }
             }
-            else {
-                height = 280;
-            }
-            return CGSizeMake(self.view.frame.size.width, height);
         }
-    }
-    else {
-        return CGSizeMake((self.view.frame.size.width / 2), height);
+        return CGSizeMake(((self.view.frame.size.width / 2) - 1), height);
     }
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
+    return 2;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
+    return 2;
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, 0, 0, 0);  // top, left, bottom, right
 }
 

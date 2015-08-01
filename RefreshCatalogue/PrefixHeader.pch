@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  RefreshCatalogue
+//
+//  Created by Ondrej Rafaj on 01/08/2015.
+//  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
+//
+
+#ifndef RefreshCatalogue_PrefixHeader_pch
+#define RefreshCatalogue_PrefixHeader_pch
+
+
+#import "FAKIonIcons.h"
+
+
+#define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
+
+
+
+
+#endif

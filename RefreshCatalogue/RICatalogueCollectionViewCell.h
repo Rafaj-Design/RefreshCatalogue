@@ -16,5 +16,9 @@
 @property (nonatomic, weak) IBOutlet UILabel *title;
 @property (nonatomic, weak) IBOutlet UILabel *subtitle;
 
+@property (nonatomic, weak) IBOutlet UIImageView *loadingIndicator;
+
+- (void)startLoadingAnimation;
+
 
 @end
