@@ -74,7 +74,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     RICatalogueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     [cell startLoadingAnimation];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://lorempixel.com/600/420/?x=%ld", indexPath.row]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://lorempixel.com/600/420/?x=%ld", (long)indexPath.row]];
     [cell.imageView setImageWithURL:url placeholderImage:[[UIImage alloc] init]];
     return cell;
 }

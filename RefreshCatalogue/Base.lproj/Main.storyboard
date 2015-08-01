@@ -38,7 +38,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="192"/>
                                             <color key="backgroundColor" red="1" green="0.8593203721576429" blue="0.13558412603681624" alpha="0.0" colorSpace="calibratedRGB"/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjg-lL-459" userLabel="Info View">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wjg-lL-459" userLabel="Info View">
                                             <rect key="frame" x="0.0" y="30" width="400" height="67"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeY-96-jTC" userLabel="Title Label">
@@ -50,7 +50,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpx-3L-imT" userLabel="Subtitle Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpx-3L-imT" userLabel="Subtitle Label">
                                                     <rect key="frame" x="8" y="36" width="384" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,7 +83,6 @@
                                     <constraint firstItem="Wjg-lL-459" firstAttribute="leading" secondItem="lSi-Su-WNf" secondAttribute="leading" id="l7n-Bg-Pmh"/>
                                     <constraint firstItem="o10-cg-6Y3" firstAttribute="top" secondItem="lSi-Su-WNf" secondAttribute="top" id="opF-Ms-qOF"/>
                                     <constraint firstAttribute="trailing" secondItem="o10-cg-6Y3" secondAttribute="trailing" id="sf2-Ot-m9D"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Wjg-lL-459" secondAttribute="bottom" constant="87" id="yNm-BP-Q37"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="o10-cg-6Y3" id="mmz-DS-wba"/>
