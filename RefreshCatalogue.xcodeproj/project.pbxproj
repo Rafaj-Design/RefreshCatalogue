@@ -41,6 +41,7 @@
 		15467CEB1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CEA1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m */; };
 		15467CF11B6CDCFA001AFEDE /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CEE1B6CDCFA001AFEDE /* UIColor+Tools.m */; };
 		15467CF21B6CDCFA001AFEDE /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CF01B6CDCFA001AFEDE /* UIImage+Tools.m */; };
+		15467CF71B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CF61B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		15467CEE1B6CDCFA001AFEDE /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
 		15467CEF1B6CDCFA001AFEDE /* UIImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tools.h"; sourceTree = "<group>"; };
 		15467CF01B6CDCFA001AFEDE /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
+		15467CF51B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICatalogueCollectionViewLayout.h; sourceTree = "<group>"; };
+		15467CF61B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICatalogueCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 				15467C1A1B6C942C001AFEDE /* Thirdparty */,
 				15467CEC1B6CDCDF001AFEDE /* Categories */,
 				15467C191B6C92B8001AFEDE /* Configuration */,
+				15467CF31B6D3CE6001AFEDE /* Libs */,
 				15467CE31B6C9ADC001AFEDE /* Cells */,
 				15467C121B6C922A001AFEDE /* Views */,
 				15467C111B6C9221001AFEDE /* View controllers */,
@@ -391,6 +395,23 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		15467CF31B6D3CE6001AFEDE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				15467CF41B6D3CEF001AFEDE /* Float layouts */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		15467CF41B6D3CEF001AFEDE /* Float layouts */ = {
+			isa = PBXGroup;
+			children = (
+				15467CF51B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.h */,
+				15467CF61B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.m */,
+			);
+			name = "Float layouts";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -502,6 +523,7 @@
 				15467CBC1B6C955A001AFEDE /* RICollectionViewController.m in Sources */,
 				15467CEB1B6C9B35001AFEDE /* RICatalogueCollectionViewCell.m in Sources */,
 				15467CE21B6C9A0D001AFEDE /* SlideNavigationController.m in Sources */,
+				15467CF71B6D3D3D001AFEDE /* RICatalogueCollectionViewLayout.m in Sources */,
 				15467BF41B6C91D0001AFEDE /* RICatalogueViewController.m in Sources */,
 				15467CDF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				15467C851B6C942C001AFEDE /* FAKFoundationIcons.m in Sources */,

@@ -25,7 +25,18 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _menuViewController = (RIMenuViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"menu"];
     
-    [SlideNavigationController sharedInstance].leftMenu = _menuViewController;
+    [[SlideNavigationController sharedInstance] setLeftMenu:_menuViewController];
+    
+    // Calculate portrait values for the menu offset values
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    if (screenWidth > screenHeight) {
+        screenWidth = screenHeight;
+        screenHeight = screenRect.size.width;
+    }
+    [[SlideNavigationController sharedInstance] setPortraitSlideOffset:(screenWidth - 280)];
+    [[SlideNavigationController sharedInstance] setLandscapeSlideOffset:(screenHeight - 280)];
     
     return YES;
 }

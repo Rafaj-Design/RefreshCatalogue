@@ -4,3 +4,6 @@
 [submodule "Thirdparty/iOS-Slide-Menu"]
 	path = Thirdparty/iOS-Slide-Menu
 	url = git@github.com:aryaxt/iOS-Slide-Menu.git
+[submodule "Thirdparty/AFNetworking"]
+	path = Thirdparty/AFNetworking
+	url = git@github.com:AFNetworking/AFNetworking.git

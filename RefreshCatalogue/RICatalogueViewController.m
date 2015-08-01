@@ -11,7 +11,7 @@
 #import "SlideNavigationController.h"
 
 
-@interface RICatalogueViewController () <SlideNavigationControllerDelegate>
+@interface RICatalogueViewController () <SlideNavigationControllerDelegate, UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -27,19 +27,19 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[RICatalogueCollectionViewCell class] forCellWithReuseIdentifier:reuseHeaderIdentifier];
-    [self.collectionView registerClass:[RICatalogueCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self.collectionView.collectionViewLayout invalidateLayout];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 /*
@@ -55,21 +55,58 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return 21;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    RICatalogueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
-    
+    NSString *identifier = nil;
+    if (indexPath.row == 0) {
+        identifier = reuseHeaderIdentifier;
+    }
+    else {
+        identifier = reuseIdentifier;
+    }
+    RICatalogueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 220;
+    
+    if (indexPath.row == 0 || (self.view.frame.size.width < 500)) {
+        if (self.view.frame.size.width < 500) {
+            return CGSizeMake(self.view.frame.size.width, height);
+        }
+        else {
+            if (self.view.frame.size.height > 500) {
+                height = 350;
+            }
+            else {
+                height = 280;
+            }
+            return CGSizeMake(self.view.frame.size.width, height);
+        }
+    }
+    else {
+        return CGSizeMake((self.view.frame.size.width / 2), height);
+    }
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0);  // top, left, bottom, right
 }
 
 #pragma mark <UICollectionViewDelegate>

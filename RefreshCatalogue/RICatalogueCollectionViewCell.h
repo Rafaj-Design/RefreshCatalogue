@@ -11,10 +11,10 @@
 
 @interface RICatalogueCollectionViewCell : RICollectionViewCell
 
-@property (nonatomic, copy) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 
-@property (nonatomic, copy) IBOutlet UILabel *title;
-@property (nonatomic, copy) IBOutlet UILabel *subtitle;
+@property (nonatomic, weak) IBOutlet UILabel *title;
+@property (nonatomic, weak) IBOutlet UILabel *subtitle;
 
 
 @end

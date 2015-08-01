@@ -25,7 +25,7 @@
         <!--Product View Controller-->
         <scene sceneID="inx-1D-N49">
             <objects>
-                <viewController id="An4-tA-mwa" customClass="RIProductViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="product" useStoryboardIdentifierAsRestorationIdentifier="YES" id="An4-tA-mwa" customClass="RIProductViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zuz-8j-Hfw"/>
                         <viewControllerLayoutGuide type="bottom" id="v2G-fK-YT4"/>
