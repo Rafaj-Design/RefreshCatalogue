@@ -9,10 +9,26 @@
 #import "RICatalogueCollectionViewCell.h"
 
 
+@interface RICatalogueCollectionViewCell ()
+
+@property (nonatomic, weak) IBOutlet UIView *countIndicatorView;
+
+@end
+
+
 @implementation RICatalogueCollectionViewCell
 
 BOOL animating = NO;
 
+
+#pragma mark Layout
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat height = 20;
+    [_countIndicatorView.layer setCornerRadius:(height / 2)];
+}
 
 #pragma mark Initialization
 
@@ -24,7 +40,7 @@ BOOL animating = NO;
 
 - (void)spinWithOptions:(UIViewAnimationOptions)options {
     // This spin completes 360 degrees every 2 seconds
-    [UIView animateWithDuration:0.5f delay:0.0f options:options animations:^{
+    [UIView animateWithDuration:0.5f delay:0.0f options:options | UIViewAnimationOptionBeginFromCurrentState animations:^{
         _loadingIndicator.transform = CGAffineTransformRotate(_loadingIndicator.transform, M_PI / 2);
     } completion:^(BOOL finished) {
         if (finished) {

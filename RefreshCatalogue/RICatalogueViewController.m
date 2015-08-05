@@ -9,10 +9,13 @@
 #import "RICatalogueViewController.h"
 #import "RICatalogueCollectionViewCell.h"
 #import "SlideNavigationController.h"
+#import "RIGallery.h"
 #import "UIImageView+AFNetworking.h"
 
 
 @interface RICatalogueViewController () <SlideNavigationControllerDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, readonly) NSArray *data;
 
 @end
 
@@ -43,6 +46,12 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     return YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(loadData) userInfo:nil repeats:NO];
+}
+
 /*
  #pragma mark - Navigation
  
@@ -53,6 +62,21 @@ static NSString * const reuseIdentifier = @"catalogueCell";
  }
  */
 
+#pragma mark Data
+
+- (void)loadData {
+    NSMutableArray *arr = [NSMutableArray array];
+    
+    for (int i = 0; i < 18; i++) {
+        RIGallery *gallery = [[RIGallery alloc] init];
+        [arr addObject:gallery];
+    }
+    
+    _data = [arr copy];
+    
+    [self.collectionView reloadData];
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -60,12 +84,12 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 21;
+    return _data.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = nil;
-    if (indexPath.row == 0 && ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
+    if (indexPath.row == 0) {
         identifier = reuseHeaderIdentifier;
     }
     else {
@@ -74,30 +98,32 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     RICatalogueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     [cell startLoadingAnimation];
     
+    RIGallery *gallery = _data[indexPath.row];
+    [cell.title setText:gallery.title];
+    [cell.subtitle setText:gallery.subtitle];
+    [cell.countIndicatorLabel setText:[NSString stringWithFormat:@"%ld", gallery.photos.count]];
+    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://lorempixel.com/600/420/?x=%ld", (long)indexPath.row]];
     [cell.imageView setImageWithURL:url placeholderImage:[[UIImage alloc] init]];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat height = 220;
-    if (self.view.frame.size.width < 500) {
-        return CGSizeMake(self.view.frame.size.width, height);
-    }
-    else {
-        if (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) && indexPath.row == 0) {
-            height = 450;
-            return CGSizeMake(self.view.frame.size.width, height);
+    if (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
+        if (indexPath.row == 0) {
+            return CGSizeMake(self.view.frame.size.width, 420);
         }
         else {
-            if (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
-                UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-                if (UIDeviceOrientationIsLandscape(deviceOrientation)) {
-                    height += 100;
-                }
-            }
+            return CGSizeMake(((self.view.frame.size.width / 2) - 1), 320);
         }
-        return CGSizeMake(((self.view.frame.size.width / 2) - 1), height);
+    }
+    else {
+        if (indexPath.row == 0) {
+            return CGSizeMake(self.view.frame.size.width, 280);
+        }
+        else {
+            return CGSizeMake(((self.view.frame.size.width / 2) - 1), 170);
+        }
     }
 }
 

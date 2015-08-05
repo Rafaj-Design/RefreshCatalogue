@@ -59,6 +59,7 @@
 		15467D5F1B6D6E37001AFEDE /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467D4C1B6D6E37001AFEDE /* UIProgressView+AFNetworking.m */; };
 		15467D601B6D6E37001AFEDE /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467D4E1B6D6E37001AFEDE /* UIRefreshControl+AFNetworking.m */; };
 		15467D611B6D6E37001AFEDE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467D501B6D6E37001AFEDE /* UIWebView+AFNetworking.m */; };
+		15467DBF1B724A71001AFEDE /* RIGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467DBE1B724A71001AFEDE /* RIGallery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,8 @@
 		15467D4F1B6D6E37001AFEDE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		15467D501B6D6E37001AFEDE /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		15467D621B6D792D001AFEDE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		15467DBD1B724A71001AFEDE /* RIGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIGallery.h; sourceTree = "<group>"; };
+		15467DBE1B724A71001AFEDE /* RIGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIGallery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +459,7 @@
 		15467CF31B6D3CE6001AFEDE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				15467DBC1B724A5D001AFEDE /* Objects */,
 				15467CF41B6D3CEF001AFEDE /* Float layouts */,
 			);
 			name = Libs;
@@ -521,6 +525,15 @@
 			);
 			name = "UIKit+AFNetworking";
 			path = "AFNetworking/UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		15467DBC1B724A5D001AFEDE /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				15467DBD1B724A71001AFEDE /* RIGallery.h */,
+				15467DBE1B724A71001AFEDE /* RIGallery.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,6 +668,7 @@
 				15467D591B6D6E37001AFEDE /* AFURLSessionManager.m in Sources */,
 				15467C171B6C929D001AFEDE /* RIViewController.m in Sources */,
 				15467C841B6C942C001AFEDE /* FAKFontAwesome.m in Sources */,
+				15467DBF1B724A71001AFEDE /* RIGallery.m in Sources */,
 				15467CF11B6CDCFA001AFEDE /* UIColor+Tools.m in Sources */,
 				15467CDB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				15467D5D1B6D6E37001AFEDE /* UIButton+AFNetworking.m in Sources */,

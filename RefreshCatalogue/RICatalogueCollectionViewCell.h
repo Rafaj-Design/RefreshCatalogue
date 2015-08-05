@@ -18,6 +18,8 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView *loadingIndicator;
 
+@property (nonatomic, weak) IBOutlet UILabel *countIndicatorLabel;
+
 - (void)startLoadingAnimation;
 
 
