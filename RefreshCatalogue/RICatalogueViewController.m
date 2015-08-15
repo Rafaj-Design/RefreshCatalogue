@@ -7,15 +7,18 @@
 //
 
 #import "RICatalogueViewController.h"
+#import <LUIDataFramework/LUIDataFramework.h>
 #import "RICatalogueCollectionViewCell.h"
 #import "SlideNavigationController.h"
-#import "RIGallery.h"
-#import "UIImageView+AFNetworking.h"
+#import "RICatalogueObject.h"
 
 
 @interface RICatalogueViewController () <SlideNavigationControllerDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, readonly) NSArray *data;
+@property (nonatomic, readonly) LUIDynamicData *service;
+
+@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -26,12 +29,27 @@ static NSString * const reuseHeaderIdentifier = @"catalogueHeaderCell";
 static NSString * const reuseIdentifier = @"catalogueCell";
 
 
+#pragma mark Creating elements
+
+- (void)setupRefreshControl {
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl setTintColor:[UIColor colorWithWhite:1 alpha:0.5]];
+    [_refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:_refreshControl];
+    [self.collectionView setAlwaysBounceVertical:YES];
+}
+
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    
+    [self setupRefreshControl];
+    
+    _service = [[LUIDynamicData alloc] initWithApiKey:@"55CDDA7F-E3F4-40EF-B057-0BCF5C574A68"];
+    [_service registerDataObjectClass:[RICatalogueObject class]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +67,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(loadData) userInfo:nil repeats:NO];
+    [self refreshData];
 }
 
 /*
@@ -64,17 +82,22 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 
 #pragma mark Data
 
-- (void)loadData {
-    NSMutableArray *arr = [NSMutableArray array];
-    
-    for (int i = 0; i < 18; i++) {
-        RIGallery *gallery = [[RIGallery alloc] init];
-        [arr addObject:gallery];
-    }
-    
-    _data = [arr copy];
-    
-    [self.collectionView reloadData];
+- (void)refreshData {
+    __weak typeof(self) weakSelf = self;
+    [_service getAll:^(NSArray *data, NSDictionary *map, NSError *error) {
+        [weakSelf setData:data];
+        [weakSelf.collectionView reloadData];
+        
+        if ([weakSelf.refreshControl isRefreshing]) {
+            [weakSelf.refreshControl endRefreshing];
+        }
+    }];
+}
+
+#pragma mark Actions
+
+- (void)doRefresh:(UIRefreshControl *)sender {
+    [self refreshData];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -98,13 +121,24 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     RICatalogueCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     [cell startLoadingAnimation];
     
-    RIGallery *gallery = _data[indexPath.row];
-    [cell.title setText:gallery.title];
-    [cell.subtitle setText:gallery.subtitle];
-    [cell.countIndicatorLabel setText:[NSString stringWithFormat:@"%ld", gallery.photos.count]];
+    RICatalogueObject *item = [_data[indexPath.row] content][@"en"];
+    [cell.title setText:item.title];
+    [cell.subtitle setText:[NSString stringWithFormat:@"%@", item.location]];
+    [cell.countIndicatorLabel setText:[NSString stringWithFormat:@"%ld", item.photos.count]];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://lorempixel.com/600/420/?x=%ld", (long)indexPath.row]];
-    [cell.imageView setImageWithURL:url placeholderImage:[[UIImage alloc] init]];
+    if (item.hero.fileData) {
+        UIImage *img = [[UIImage alloc] initWithData:item.hero.fileData];
+        [cell.imageView setImage:img];
+    }
+    else {
+        [cell.imageView setImage:[[UIImage alloc] init]];
+        
+        [item.hero getFileDataWithSuccessBlock:^(NSData *data, NSError *error) {
+            //[self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+            [self.collectionView reloadData];
+        }];
+    }
+    
     return cell;
 }
 

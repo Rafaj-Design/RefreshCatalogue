@@ -40,7 +40,7 @@ BOOL animating = NO;
 
 - (void)spinWithOptions:(UIViewAnimationOptions)options {
     // This spin completes 360 degrees every 2 seconds
-    [UIView animateWithDuration:0.5f delay:0.0f options:options | UIViewAnimationOptionBeginFromCurrentState animations:^{
+    [UIView animateWithDuration:0.4f delay:0.0f options:options | UIViewAnimationOptionBeginFromCurrentState animations:^{
         _loadingIndicator.transform = CGAffineTransformRotate(_loadingIndicator.transform, M_PI / 2);
     } completion:^(BOOL finished) {
         if (finished) {
@@ -59,6 +59,8 @@ BOOL animating = NO;
 #pragma mark Settings
 
 - (void)startLoadingAnimation {
+    [_loadingIndicator.layer removeAllAnimations];
+    
     if (!_loadingIndicator.image) {
         FAKIonIcons *icon = [FAKIonIcons loadCIconWithSize:34];
         [icon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
