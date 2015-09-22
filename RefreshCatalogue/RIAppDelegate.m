@@ -8,6 +8,8 @@
 
 #import "RIAppDelegate.h"
 #import <LUIFramework/LUIFramework.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 #import "SlideNavigationController.h"
 #import "RIMenuViewController.h"
 
@@ -23,11 +25,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // LiveUI
-    [[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io"];
-    [[LUIURLs sharedInstance] setCustomAssetsUrlString:@"http://localhost/images.liveui.io"];
+    [Fabric with:@[CrashlyticsKit]];
     
-
+    // LiveUI
+    //[[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io"];
+    //[[LUIURLs sharedInstance] setCustomAssetsUrlString:@"http://localhost/images.liveui.io"];
+    
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _menuViewController = (RIMenuViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"menu"];
     

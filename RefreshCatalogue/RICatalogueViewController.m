@@ -107,6 +107,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    //return 1;
     return _data.count;
 }
 
@@ -143,20 +144,24 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat w = self.view.frame.size.width;
+    if (w < 40) {
+        w = 40;
+    }
     if (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
         if (indexPath.row == 0) {
-            return CGSizeMake(self.view.frame.size.width, 420);
+            return CGSizeMake(w, 420);
         }
         else {
-            return CGSizeMake(((self.view.frame.size.width / 2) - 1), 320);
+            return CGSizeMake(((w / 2) - 1), 320);
         }
     }
     else {
         if (indexPath.row == 0) {
-            return CGSizeMake(self.view.frame.size.width, 280);
+            return CGSizeMake(w, 280);
         }
         else {
-            return CGSizeMake(((self.view.frame.size.width / 2) - 1), 170);
+            return CGSizeMake(((w / 2) - 1), 170);
         }
     }
 }

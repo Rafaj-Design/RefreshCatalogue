@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1507EF391BA20C7900D256C3 /* RefreshCatalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1507EF371BA20C7900D256C3 /* RefreshCatalogue.xcdatamodeld */; };
+		1507EF3B1BA20C8B00D256C3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1507EF3A1BA20C8B00D256C3 /* CoreData.framework */; };
 		15467BEE1B6C91D0001AFEDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BED1B6C91D0001AFEDE /* main.m */; };
 		15467BF11B6C91D0001AFEDE /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF01B6C91D0001AFEDE /* RIAppDelegate.m */; };
 		15467BF41B6C91D0001AFEDE /* RICatalogueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467BF31B6C91D0001AFEDE /* RICatalogueViewController.m */; };
@@ -49,6 +51,8 @@
 		15467F521B7E53C2001AFEDE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15467F501B7E53C2001AFEDE /* CoreTelephony.framework */; };
 		15467F561B7E67B0001AFEDE /* RICatalogueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467F551B7E67B0001AFEDE /* RICatalogueObject.m */; };
 		15467F581B7EB03E001AFEDE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15467F571B7EB03E001AFEDE /* SystemConfiguration.framework */; };
+		1546803E1B84B132001AFEDE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1546803C1B84B132001AFEDE /* Fabric.framework */; };
+		1546803F1B84B132001AFEDE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1546803D1B84B132001AFEDE /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1507EF341BA20C1E00D256C3 /* RICoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICoreDataManager.h; sourceTree = "<group>"; };
+		1507EF351BA20C1E00D256C3 /* RICoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICoreDataManager.m; sourceTree = "<group>"; };
+		1507EF381BA20C7900D256C3 /* RefreshCatalogue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RefreshCatalogue.xcdatamodel; sourceTree = "<group>"; };
+		1507EF3A1BA20C8B00D256C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1507EF551BA2F34A00D256C3 /* RIGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIGallery.h; sourceTree = "<group>"; };
+		1507EF561BA2F34A00D256C3 /* RIGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIGallery.m; sourceTree = "<group>"; };
+		1507EF581BA2F34B00D256C3 /* RIFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIFile.h; sourceTree = "<group>"; };
+		1507EF591BA2F34B00D256C3 /* RIFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIFile.m; sourceTree = "<group>"; };
 		15467BE81B6C91D0001AFEDE /* RefreshCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15467BEC1B6C91D0001AFEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15467BED1B6C91D0001AFEDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +149,8 @@
 		15467F541B7E67B0001AFEDE /* RICatalogueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICatalogueObject.h; sourceTree = "<group>"; };
 		15467F551B7E67B0001AFEDE /* RICatalogueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICatalogueObject.m; sourceTree = "<group>"; };
 		15467F571B7EB03E001AFEDE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1546803C1B84B132001AFEDE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		1546803D1B84B132001AFEDE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +158,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1507EF3B1BA20C8B00D256C3 /* CoreData.framework in Frameworks */,
+				1546803E1B84B132001AFEDE /* Fabric.framework in Frameworks */,
 				15467F581B7EB03E001AFEDE /* SystemConfiguration.framework in Frameworks */,
+				1546803F1B84B132001AFEDE /* Crashlytics.framework in Frameworks */,
 				15467F511B7E53C2001AFEDE /* CoreLocation.framework in Frameworks */,
 				15467F521B7E53C2001AFEDE /* CoreTelephony.framework in Frameworks */,
 				15467F4C1B7E2F6B001AFEDE /* LUIDataFramework.framework in Frameworks */,
@@ -163,6 +180,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1507EF331BA20BFE00D256C3 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				1507EF5B1BA2F36C00D256C3 /* Objects */,
+				1507EF341BA20C1E00D256C3 /* RICoreDataManager.h */,
+				1507EF351BA20C1E00D256C3 /* RICoreDataManager.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		1507EF5B1BA2F36C00D256C3 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1507EF581BA2F34B00D256C3 /* RIFile.h */,
+				1507EF591BA2F34B00D256C3 /* RIFile.m */,
+				1507EF551BA2F34A00D256C3 /* RIGallery.h */,
+				1507EF561BA2F34A00D256C3 /* RIGallery.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		15467BDF1B6C91D0001AFEDE = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +241,7 @@
 		15467BEB1B6C91D0001AFEDE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1507EF371BA20C7900D256C3 /* RefreshCatalogue.xcdatamodeld */,
 				15467BF51B6C91D0001AFEDE /* Main.storyboard */,
 				15467CC01B6C9639001AFEDE /* SecondScreen.storyboard */,
 				15467BF81B6C91D0001AFEDE /* Images.xcassets */,
@@ -426,6 +465,7 @@
 		15467CF31B6D3CE6001AFEDE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				1507EF331BA20BFE00D256C3 /* Core Data */,
 				15467CF41B6D3CEF001AFEDE /* Float layouts */,
 			);
 			name = Libs;
@@ -443,6 +483,9 @@
 		15467DC01B7AAEB4001AFEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1507EF3A1BA20C8B00D256C3 /* CoreData.framework */,
+				1546803C1B84B132001AFEDE /* Fabric.framework */,
+				1546803D1B84B132001AFEDE /* Crashlytics.framework */,
 				15467F571B7EB03E001AFEDE /* SystemConfiguration.framework */,
 				15467F4F1B7E53C2001AFEDE /* CoreLocation.framework */,
 				15467F501B7E53C2001AFEDE /* CoreTelephony.framework */,
@@ -481,6 +524,7 @@
 				15467BE41B6C91D0001AFEDE /* Sources */,
 				15467BE51B6C91D0001AFEDE /* Frameworks */,
 				15467BE61B6C91D0001AFEDE /* Resources */,
+				1546803B1B84B110001AFEDE /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -575,6 +619,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1546803B1B84B110001AFEDE /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run fdad57f5fd93d14410334446675bff03d3a3f996 718bb4804b7397ffca9550527a28d9dd77a37ec037e726d45a8078b310c8e7f4";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15467BE41B6C91D0001AFEDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -600,6 +661,7 @@
 				15467CC41B6C9666001AFEDE /* RISecondScreenViewController.m in Sources */,
 				15467CDC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				15467C861B6C942C001AFEDE /* FAKIcon.m in Sources */,
+				1507EF391BA20C7900D256C3 /* RefreshCatalogue.xcdatamodeld in Sources */,
 				15467CF21B6CDCFA001AFEDE /* UIImage+Tools.m in Sources */,
 				15467CDE1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				15467C881B6C942C001AFEDE /* FAKZocial.m in Sources */,
@@ -925,6 +987,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1507EF371BA20C7900D256C3 /* RefreshCatalogue.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1507EF381BA20C7900D256C3 /* RefreshCatalogue.xcdatamodel */,
+			);
+			currentVersion = 1507EF381BA20C7900D256C3 /* RefreshCatalogue.xcdatamodel */;
+			path = RefreshCatalogue.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 15467BE01B6C91D0001AFEDE /* Project object */;
 }
