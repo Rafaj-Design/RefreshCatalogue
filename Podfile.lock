@@ -1,0 +1,27 @@
+PODS:
+  - Masonry (0.6.3)
+  - MHVideoPhotoGallery (2.0):
+    - SDWebImage
+  - Reachability (3.2)
+  - Reveal-iOS-SDK (1.6.0)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - VCTransitionsLibrary (1.5.0)
+
+DEPENDENCIES:
+  - Masonry
+  - MHVideoPhotoGallery
+  - Reachability
+  - Reveal-iOS-SDK
+  - VCTransitionsLibrary
+
+SPEC CHECKSUMS:
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MHVideoPhotoGallery: 4b35cdd7f8040802c853710dad7bb1454b5cc5eb
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Reveal-iOS-SDK: 6afacafd60f66f2822c09c43ae60562881bfab6e
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
+
+COCOAPODS: 0.38.2

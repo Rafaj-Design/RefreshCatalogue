@@ -30,7 +30,7 @@
 		15467CBC1B6C955A001AFEDE /* RICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CBB1B6C955A001AFEDE /* RICollectionViewController.m */; };
 		15467CC11B6C9639001AFEDE /* SecondScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15467CC01B6C9639001AFEDE /* SecondScreen.storyboard */; };
 		15467CC41B6C9666001AFEDE /* RISecondScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CC31B6C9666001AFEDE /* RISecondScreenViewController.m */; };
-		15467CC81B6C96B7001AFEDE /* RIProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CC71B6C96B7001AFEDE /* RIProductViewController.m */; };
+		15467CC81B6C96B7001AFEDE /* RIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CC71B6C96B7001AFEDE /* RIItemViewController.m */; };
 		15467CDB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CCD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m */; };
 		15467CDC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CCF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScale.m */; };
 		15467CDD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 15467CD11B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
@@ -53,6 +53,7 @@
 		15467F581B7EB03E001AFEDE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15467F571B7EB03E001AFEDE /* SystemConfiguration.framework */; };
 		1546803E1B84B132001AFEDE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1546803C1B84B132001AFEDE /* Fabric.framework */; };
 		1546803F1B84B132001AFEDE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1546803D1B84B132001AFEDE /* Crashlytics.framework */; };
+		6BFD280AA016116C1FC60066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCFB2659FFB425AF411EB57 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +112,8 @@
 		15467CC01B6C9639001AFEDE /* SecondScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondScreen.storyboard; sourceTree = "<group>"; };
 		15467CC21B6C9666001AFEDE /* RISecondScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RISecondScreenViewController.h; sourceTree = "<group>"; };
 		15467CC31B6C9666001AFEDE /* RISecondScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RISecondScreenViewController.m; sourceTree = "<group>"; };
-		15467CC61B6C96B7001AFEDE /* RIProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIProductViewController.h; sourceTree = "<group>"; };
-		15467CC71B6C96B7001AFEDE /* RIProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIProductViewController.m; sourceTree = "<group>"; };
+		15467CC61B6C96B7001AFEDE /* RIItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIItemViewController.h; sourceTree = "<group>"; };
+		15467CC71B6C96B7001AFEDE /* RIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIItemViewController.m; sourceTree = "<group>"; };
 		15467CCB1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
 		15467CCC1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
 		15467CCD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
@@ -151,6 +152,10 @@
 		15467F571B7EB03E001AFEDE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1546803C1B84B132001AFEDE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		1546803D1B84B132001AFEDE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		74CB5DECC6A4BC24A9566CA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9DC71B28AE53F6DB8384CA2C /* Pods.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.enterprise.xcconfig; path = "Pods/Target Support Files/Pods/Pods.enterprise.xcconfig"; sourceTree = "<group>"; };
+		BBCFB2659FFB425AF411EB57 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D112FA3A05ED57F33E7038 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +172,7 @@
 				15467F4C1B7E2F6B001AFEDE /* LUIDataFramework.framework in Frameworks */,
 				15467F4E1B7E3677001AFEDE /* LUIFramework.framework in Frameworks */,
 				15467F401B7E1896001AFEDE /* libFlurry_6.7.0.a in Frameworks */,
+				6BFD280AA016116C1FC60066 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +215,7 @@
 				15467C041B6C91D0001AFEDE /* RefreshCatalogueTests */,
 				15467DC01B7AAEB4001AFEDE /* Frameworks */,
 				15467BE91B6C91D0001AFEDE /* Products */,
+				A35B3A91848975B3666AB424 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -379,8 +386,8 @@
 		15467CC51B6C9697001AFEDE /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				15467CC61B6C96B7001AFEDE /* RIProductViewController.h */,
-				15467CC71B6C96B7001AFEDE /* RIProductViewController.m */,
+				15467CC61B6C96B7001AFEDE /* RIItemViewController.h */,
+				15467CC71B6C96B7001AFEDE /* RIItemViewController.m */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -491,6 +498,7 @@
 				15467F501B7E53C2001AFEDE /* CoreTelephony.framework */,
 				15467F4D1B7E3677001AFEDE /* LUIFramework.framework */,
 				15467F4B1B7E2F6B001AFEDE /* LUIDataFramework.framework */,
+				BBCFB2659FFB425AF411EB57 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -514,6 +522,16 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		A35B3A91848975B3666AB424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8D112FA3A05ED57F33E7038 /* Pods.debug.xcconfig */,
+				74CB5DECC6A4BC24A9566CA2 /* Pods.release.xcconfig */,
+				9DC71B28AE53F6DB8384CA2C /* Pods.enterprise.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -521,10 +539,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15467C0B1B6C91D0001AFEDE /* Build configuration list for PBXNativeTarget "RefreshCatalogue" */;
 			buildPhases = (
+				7E1A68218DB0DF5D8A1C3C92 /* Check Pods Manifest.lock */,
 				15467BE41B6C91D0001AFEDE /* Sources */,
 				15467BE51B6C91D0001AFEDE /* Frameworks */,
 				15467BE61B6C91D0001AFEDE /* Resources */,
 				1546803B1B84B110001AFEDE /* Fabric */,
+				A0D0E03ADCB782CEADFA59DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,6 +654,36 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run fdad57f5fd93d14410334446675bff03d3a3f996 718bb4804b7397ffca9550527a28d9dd77a37ec037e726d45a8078b310c8e7f4";
 		};
+		7E1A68218DB0DF5D8A1C3C92 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A0D0E03ADCB782CEADFA59DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -649,7 +699,7 @@
 				15467CDF1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				15467C851B6C942C001AFEDE /* FAKFoundationIcons.m in Sources */,
 				15467BF11B6C91D0001AFEDE /* RIAppDelegate.m in Sources */,
-				15467CC81B6C96B7001AFEDE /* RIProductViewController.m in Sources */,
+				15467CC81B6C96B7001AFEDE /* RIItemViewController.m in Sources */,
 				15467CE61B6C9B09001AFEDE /* RICollectionViewCell.m in Sources */,
 				15467CDD1B6C9A0D001AFEDE /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				15467F561B7E67B0001AFEDE /* RICatalogueObject.m in Sources */,
@@ -792,6 +842,7 @@
 		};
 		15467C0C1B6C91D0001AFEDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D112FA3A05ED57F33E7038 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -804,7 +855,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RefreshCatalogue/PrefixHeader.pch;
 				INFOPLIST_FILE = RefreshCatalogue/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -817,6 +868,7 @@
 		};
 		15467C0D1B6C91D0001AFEDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74CB5DECC6A4BC24A9566CA2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -829,7 +881,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RefreshCatalogue/PrefixHeader.pch;
 				INFOPLIST_FILE = RefreshCatalogue/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -914,6 +966,7 @@
 		};
 		15467D681B6D8E4F001AFEDE /* Enterprise */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DC71B28AE53F6DB8384CA2C /* Pods.enterprise.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -926,7 +979,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RefreshCatalogue/PrefixHeader.pch;
 				INFOPLIST_FILE = RefreshCatalogue/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

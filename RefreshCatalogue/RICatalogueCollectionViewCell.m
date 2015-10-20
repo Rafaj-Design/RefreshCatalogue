@@ -38,22 +38,13 @@ BOOL animating = NO;
 
 #pragma mark Settings
 
-- (void)spinWithOptions:(UIViewAnimationOptions)options {
-    // This spin completes 360 degrees every 2 seconds
-    [UIView animateWithDuration:0.4f delay:0.0f options:options | UIViewAnimationOptionBeginFromCurrentState animations:^{
-        _loadingIndicator.transform = CGAffineTransformRotate(_loadingIndicator.transform, M_PI / 2);
-    } completion:^(BOOL finished) {
-        if (finished) {
-            if (animating) {
-                // If flag still set, keep spinning with constant speed
-                [self spinWithOptions:UIViewAnimationOptionCurveLinear];
-            }
-            else if (options != UIViewAnimationOptionCurveEaseOut) {
-                // One last spin, with deceleration
-                [self spinWithOptions:UIViewAnimationOptionCurveEaseOut];
-            }
-        }
-    }];
+- (void)spinWithOptions {
+    CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = [NSNumber numberWithFloat:0.0f];
+    animation.toValue = [NSNumber numberWithFloat:(2 * M_PI)];
+    animation.duration = 2;
+    animation.repeatCount = INFINITY;
+    [_loadingIndicator.layer addAnimation:animation forKey:@"SpinAnimation"];
 }
 
 #pragma mark Settings
@@ -69,7 +60,7 @@ BOOL animating = NO;
     }
     
     animating = YES;
-    [self spinWithOptions:UIViewAnimationOptionCurveEaseIn];
+    [self spinWithOptions];
 }
 
 - (void)stopLoadingAnimation {

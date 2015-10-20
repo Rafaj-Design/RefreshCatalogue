@@ -1,5 +1,5 @@
 //
-//  RIProductViewController.h
+//  RIItemViewController.h
 //  RefreshCatalogue
 //
 //  Created by Ondrej Rafaj on 01/08/2015.
@@ -8,6 +8,6 @@
 
 #import "RIViewController.h"
 
-@interface RIProductViewController : RIViewController
+@interface RIItemViewController : RIViewController
 
 @end

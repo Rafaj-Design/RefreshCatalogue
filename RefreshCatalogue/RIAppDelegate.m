@@ -30,6 +30,8 @@
     // LiveUI
     //[[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io"];
     //[[LUIURLs sharedInstance] setCustomAssetsUrlString:@"http://localhost/images.liveui.io"];
+    [[LUIMain sharedInstance] setDebugMode:YES];
+    [[LUIMain sharedInstance] setApiKey:@"0252D218-90C6-467D-B71A-6FC2D24DEA68"];
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _menuViewController = (RIMenuViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"menu"];

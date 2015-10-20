@@ -10,12 +10,15 @@
 #define RefreshCatalogue_PrefixHeader_pch
 
 
+#import <LUIFramework/LUIFramework.h>
+#import <LUIFramework/NSLocalizedStringOverride.h>
+
+
 #import "FAKIonIcons.h"
+#import "Masonry.h"
 
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
-
-
 
 
 #endif

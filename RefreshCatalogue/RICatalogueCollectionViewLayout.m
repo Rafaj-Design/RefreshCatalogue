@@ -12,7 +12,7 @@
 @implementation RICatalogueCollectionViewLayout
 
 
-- (NSArray *) layoutAttributesForElementsInRect:(CGRect)rect {
+- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray *answer = [super layoutAttributesForElementsInRect:rect];
     for (int i = 1; i < [answer count]; ++i) {
         UICollectionViewLayoutAttributes *currentLayoutAttributes = answer[i];

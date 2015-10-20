@@ -8,6 +8,9 @@
 
 #import "RICatalogueViewController.h"
 #import <LUIDataFramework/LUIDataFramework.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <MHVideoPhotoGallery/MHGallery.h>
+#import <Reachability/Reachability.h>
 #import "RICatalogueCollectionViewCell.h"
 #import "SlideNavigationController.h"
 #import "RICatalogueObject.h"
@@ -18,7 +21,10 @@
 @property (nonatomic, readonly) LUIDynamicData *service;
 
 @property (nonatomic, strong) NSArray *data;
-@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
+@property (nonatomic, readonly) UIRefreshControl *refreshControl;
+
+@property (nonatomic, readonly) Reachability *reachability;
 
 @end
 
@@ -36,6 +42,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     [_refreshControl setTintColor:[UIColor colorWithWhite:1 alpha:0.5]];
     [_refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:_refreshControl];
+    
     [self.collectionView setAlwaysBounceVertical:YES];
 }
 
@@ -50,6 +57,15 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     
     _service = [[LUIDynamicData alloc] initWithApiKey:@"55CDDA7F-E3F4-40EF-B057-0BCF5C574A68"];
     [_service registerDataObjectClass:[RICatalogueObject class]];
+    
+    __weak typeof(self) weakSelf = self;
+    _reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
+    [_reachability setReachableBlock:^(Reachability *reachability) {
+        [weakSelf.collectionView reloadData];
+    }];
+    [_reachability setUnreachableBlock:^(Reachability *reachability) {
+        [weakSelf.collectionView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,10 +80,19 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     return YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (!_data) {
+        [self refreshData];
+    }
+    else {
+        [self.collectionView reloadData];
+    }
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self refreshData];
 }
 
 /*
@@ -87,7 +112,6 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     [_service getAll:^(NSArray *data, NSDictionary *map, NSError *error) {
         [weakSelf setData:data];
         [weakSelf.collectionView reloadData];
-        
         if ([weakSelf.refreshControl isRefreshing]) {
             [weakSelf.refreshControl endRefreshing];
         }
@@ -127,17 +151,34 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     [cell.subtitle setText:[NSString stringWithFormat:@"%@", item.location]];
     [cell.countIndicatorLabel setText:[NSString stringWithFormat:@"%ld", item.photos.count]];
     
-    if (item.hero.fileData) {
-        UIImage *img = [[UIImage alloc] initWithData:item.hero.fileData];
+    NSString *imageKey = item.hero.name;
+    UIImage *img = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imageKey];
+    if (img) {
         [cell.imageView setImage:img];
+        if (cell.imageView.alpha < 1) {
+            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                [cell.imageView setAlpha:1];
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
     }
     else {
-        [cell.imageView setImage:[[UIImage alloc] init]];
+        [cell.imageView setAlpha:0];
         
-        [item.hero getFileDataWithSuccessBlock:^(NSData *data, NSError *error) {
-            //[self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-            [self.collectionView reloadData];
-        }];
+        if (_reachability.isReachable) {
+            [item.hero getFileDataWithSuccessBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                        UIImage *img = [[UIImage alloc] initWithData:data];
+                        [[SDImageCache sharedImageCache] storeImage:img forKey:imageKey toDisk:YES];
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+                        });
+                    });
+                }
+            }];
+        }
     }
     
     return cell;
@@ -176,6 +217,38 @@ static NSString * const reuseIdentifier = @"catalogueCell";
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, 0, 0, 0);  // top, left, bottom, right
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    UIImageView *imageView = [(RICatalogueCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath] imageView];
+    
+    MHGalleryItem *hero = [MHGalleryItem itemWithImage:imageView.image];
+    MHGalleryItem *image1 = [MHGalleryItem itemWithURL:@"https://pbs.twimg.com/profile_images/641656002568261632/Gnw8AJ4J.jpg" galleryType:MHGalleryTypeImage];
+    MHGalleryItem *image2 = [MHGalleryItem itemWithURL:@"http://www.ondrej-rafaj.co.uk/data/xpl1.jpg" galleryType:MHGalleryTypeImage];
+    MHGalleryItem *youtube = [MHGalleryItem itemWithYoutubeVideoID:@"dBgMVtxrIN0"];
+    
+    NSArray *galleryData = @[hero, image1,image2,youtube];
+    
+    MHGalleryController *gallery = [MHGalleryController galleryWithPresentationStyle:MHGalleryViewModeImageViewerNavigationBarShown];
+    gallery.galleryItems = galleryData;
+    gallery.presentingFromImageView = imageView;
+    gallery.presentationIndex = 0;
+    
+    __weak MHGalleryController *blockGallery = gallery;
+    
+    gallery.finishedCallback = ^(NSInteger currentIndex, UIImage *image, MHTransitionDismissMHGallery *interactiveTransition, MHGalleryViewMode viewMode){
+        NSIndexPath *newIndex = [NSIndexPath indexPathForRow:currentIndex inSection:0];
+        [self.collectionView scrollToItemAtIndexPath:newIndex atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImageView *imageView = [(RICatalogueCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath] imageView];
+            [blockGallery dismissViewControllerAnimated:YES dismissImageView:imageView completion:nil];
+        });
+        
+    };    
+    [self presentMHGalleryController:gallery animated:YES completion:nil];
 }
 
 #pragma mark <UICollectionViewDelegate>
