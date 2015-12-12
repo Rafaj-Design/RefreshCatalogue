@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DA3A67731F446F261FF6A1EF376C44EB4640D712",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CE260C718C74B0A2063352FB186C2E4C45E11705" : 0,
+    "983A1217D55EBA2107FCB144A971368D82732846" : 0,
+    "CE419816D32B8A55C9338D2F78282407F058F975" : 0,
+    "DA3A67731F446F261FF6A1EF376C44EB4640D712" : 0,
+    "351E80158C31C9385E10ADF01B47F27851D47BC2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "80A31894-4ABE-4732-B267-587AEF5DC1B5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CE260C718C74B0A2063352FB186C2E4C45E11705" : "LUIFramework\/_Release",
+    "983A1217D55EBA2107FCB144A971368D82732846" : "LUIFramework",
+    "CE419816D32B8A55C9338D2F78282407F058F975" : "RefreshCatalogueThirdparty\/iOS-Slide-Menu",
+    "DA3A67731F446F261FF6A1EF376C44EB4640D712" : "RefreshCatalogue",
+    "351E80158C31C9385E10ADF01B47F27851D47BC2" : "RefreshCatalogueThirdparty\/FontAwesomeKit"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RefreshCatalogue",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RefreshCatalogue.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:PrideChung\/FontAwesomeKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "351E80158C31C9385E10ADF01B47F27851D47BC2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Ridiculous-Innovations\/LUIFramework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "983A1217D55EBA2107FCB144A971368D82732846"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Ridiculous-Innovations\/LUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE260C718C74B0A2063352FB186C2E4C45E11705"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:aryaxt\/iOS-Slide-Menu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE419816D32B8A55C9338D2F78282407F058F975"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Ridiculous-Innovations\/RefreshCatalogue.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA3A67731F446F261FF6A1EF376C44EB4640D712"
+    }
+  ]
+}

@@ -149,7 +149,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     RICatalogueObject *item = [_data[indexPath.row] content][@"en"];
     [cell.title setText:item.title];
     [cell.subtitle setText:[NSString stringWithFormat:@"%@", item.location]];
-    [cell.countIndicatorLabel setText:[NSString stringWithFormat:@"%ld", item.photos.count]];
+    [cell.countIndicatorLabel setText:[NSString stringWithFormat:@"%ld", (long)(item.photos.count + 1)]];
     
     NSString *imageKey = item.hero.name;
     UIImage *img = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imageKey];
@@ -158,6 +158,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
         if (cell.imageView.alpha < 1) {
             [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 [cell.imageView setAlpha:1];
+                [cell.loadingIndicator setAlpha:0];
             } completion:^(BOOL finished) {
                 
             }];
@@ -165,6 +166,7 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     }
     else {
         [cell.imageView setAlpha:0];
+        [cell.loadingIndicator setAlpha:1];
         
         if (_reachability.isReachable) {
             [item.hero getFileDataWithSuccessBlock:^(NSData *data, NSError *error) {
@@ -231,7 +233,8 @@ static NSString * const reuseIdentifier = @"catalogueCell";
     
     NSArray *galleryData = @[hero, image1,image2,youtube];
     
-    MHGalleryController *gallery = [MHGalleryController galleryWithPresentationStyle:MHGalleryViewModeImageViewerNavigationBarShown];
+    MHGalleryController *gallery = [MHGalleryController galleryWithPresentationStyle:MHGalleryViewModeImageViewerNavigationBarHidden];
+    [gallery.overViewViewController.view setBackgroundColor:[UIColor blackColor]];
     gallery.galleryItems = galleryData;
     gallery.presentingFromImageView = imageView;
     gallery.presentationIndex = 0;
